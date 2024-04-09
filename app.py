@@ -16,7 +16,7 @@ class MyClient(discord.Client):
     async def on_message(self, message):
         print(f'Message from {message.author}: {message.content}')
 
-
+    # Greeting ability
         if message.content.startswith('!hello'):
             await message.channel.send('Hello!')
 
