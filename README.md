@@ -40,3 +40,13 @@ This Discord bot is a simple example bot that can be used to interact with users
 
 ### Commands
 - `!hello`: Greet the user who sends the command with a response.
+
+### SSL Verification Error MacOS Solution 
+1. Install Certifi
+   ```
+   pip install certifi
+   ```
+2. Run the script
+   ```
+   /Applications/Python\ 3.12/Install\ Certificates.command 
+   ```
