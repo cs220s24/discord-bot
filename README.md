@@ -30,7 +30,20 @@ This Discord bot is a simple example bot that can be used to interact with users
    ```
    BOT_TOKEN=YOUR_DISCORD_BOT_TOKEN
    ```
-
+5. Setting up redis database
+   ```
+   brew install redis
+   ```
+   Start redis server
+   ```
+   brew services start redis
+   ```
+   Confirm server is running
+   ```
+   redis-cli ping
+   ```
+   If responded with PONG then the server is running as it should
+   
 ### Usage
 1. Run the bot by executing the `app.py` file:
    ```
@@ -40,6 +53,7 @@ This Discord bot is a simple example bot that can be used to interact with users
 
 ### Commands
 - `!hello`: Greet the user who sends the command with a response.
+- `!motivate`: Gives the user who sends the command an inspiring quote.
 
 ### SSL Verification Error MacOS Solution 
 1. Install Certifi
