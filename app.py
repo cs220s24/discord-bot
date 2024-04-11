@@ -1,10 +1,18 @@
 import discord
 import os
 from dotenv import load_dotenv
+from db import RedisHandler  
+from quotes import MOTIVATIONAL_QUOTES
 
 load_dotenv()
 
 token = os.getenv('BOT_TOKEN')
+
+# Initialize the RedisHandler with default parameters
+redis_handler = RedisHandler()
+
+# Set motivational quotes in the Redis database
+redis_handler.set_motivational_quotes(MOTIVATIONAL_QUOTES)
 
 # Define a custom Discord client class
 class MyClient(discord.Client):
@@ -20,6 +28,10 @@ class MyClient(discord.Client):
         if message.content.startswith('!hello'):
             await message.channel.send('Hello!')
 
+    # Command to get a motivational quote
+        if message.content.startswith('!motivate'):
+            quote = redis_handler.get_random_quote()
+            await message.channel.send(quote)
 
 intents = discord.Intents.default()
 intents.message_content = True
