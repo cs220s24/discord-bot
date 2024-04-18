@@ -13,11 +13,13 @@ This Discord bot is a simple example bot that can be used to interact with users
 
 ## Features
 - Greeting users with a response when they send `!hello` in a text channel.
+- Providing inspiring quotes to users who send `!motivate` command.
 
 ## Getting Started
 ### Prerequisites
 - Python 3.6 or higher
 - Discord.py library
+- Redis database
 
 ### Installation
 1. Clone or download this repository to your local machine.
@@ -30,26 +32,36 @@ This Discord bot is a simple example bot that can be used to interact with users
    ```
    BOT_TOKEN=YOUR_DISCORD_BOT_TOKEN
    ```
-5. Setting up redis database
+### Redis Database Setup (MacOS)
+1. Install Redis using Homebrew:
    ```
    brew install redis
    ```
-   Start redis server
+2. Start the Redis server:
    ```
    brew services start redis
    ```
-   Confirm server is running
+3. Confirm the server is running:
    ```
    redis-cli ping
    ```
-   If responded with PONG then the server is running as it should
-   
+   If it responds with PONG, then the server is running successfully.
+
 ### Usage
-1. Run the bot by executing the `app.py` file:
+1. Make the run_bot.sh script executable by running:
+   ```
+   chmod +x run_bot.sh
+   ```   
+2. Run the bot by executing the `run_bot.sh` script:
+   ```
+   ./run_bot.sh
+   ```
+
+3. Run the bot by executing the `app.py` file:
    ```
    python app.py
    ```
-2. The bot will log in and be ready to respond to commands and events in the Discord server.
+4. The bot will log in and be ready to respond to commands and events in the Discord server.
 
 ### Commands
 - `!hello`: Greet the user who sends the command with a response.
