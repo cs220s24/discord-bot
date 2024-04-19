@@ -23,29 +23,11 @@ This Discord bot is a simple example bot that can be used to interact with users
 
 ### Installation
 1. Clone or download this repository to your local machine.
-2. Install dependencies by running:
-   ```
-   pip install -r requirements.txt
-   ```
-3. Create a Discord bot and obtain its token. You can follow the official Discord documentation on how to create a bot and obtain its token.
-4. Create a `.env` file in the project directory and add the following line to it:
+2. Create a Discord bot and obtain its token. You can follow the official Discord documentation on how to create a bot and obtain its token.
+3. Create a `.env` file in the project directory and add the following line to it:
    ```
    BOT_TOKEN=YOUR_DISCORD_BOT_TOKEN
    ```
-### Redis Database Setup (MacOS)
-1. Install Redis using Homebrew:
-   ```
-   brew install redis
-   ```
-2. Start the Redis server:
-   ```
-   brew services start redis
-   ```
-3. Confirm the server is running:
-   ```
-   redis-cli ping
-   ```
-   If it responds with PONG, then the server is running successfully.
 
 ### Usage
 1. Make the run_bot.sh script executable by running:
@@ -56,12 +38,8 @@ This Discord bot is a simple example bot that can be used to interact with users
    ```
    ./run_bot.sh
    ```
-
-3. Run the bot by executing the `app.py` file:
-   ```
-   python app.py
-   ```
-4. The bot will log in and be ready to respond to commands and events in the Discord server.
+   
+3. The bot will log in and be ready to respond to commands and events in the Discord server.
 
 ### Commands
 - `!hello`: Greet the user who sends the command with a response.
