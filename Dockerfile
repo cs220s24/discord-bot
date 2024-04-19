@@ -9,5 +9,6 @@ RUN .venv/bin/pip install -r requirements.txt
 
 COPY app.py .
 COPY db.py .
+COPY quotes.py .
 
 CMD [".venv/bin/python", "app.py"]
