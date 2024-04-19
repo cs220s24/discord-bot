@@ -63,7 +63,7 @@ This Discord bot is a simple example bot that can be used to interact with users
    ```
    sudo yum install redis6
    ```
-6. Run Redis6 server
+6. Open a new terminal and run Redis6 server
    ```
    redis6-server
    ```
