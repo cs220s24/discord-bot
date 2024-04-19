@@ -47,7 +47,10 @@ This Discord bot is a simple example bot that can be used to interact with users
    sudo yum install git
    ```
 2. Clone the repository
-3. Create the virtual environment
+
+3. Go into to your discord-bot folder
+
+4. Create the virtual environment
    ```
    python3 -m venv .venv
    source .venv/bin/activate
