@@ -71,7 +71,12 @@ This Discord bot is a simple example bot that can be used to interact with users
    ```
    redis6-cli
    ```
-8. Run the application
+8. Create a Discord bot and obtain its token. You can follow the official Discord documentation on how to create a bot and obtain its token.
+9. Create a `.env` file in the project directory and add the following line to it:
+   ```
+   BOT_TOKEN=YOUR_DISCORD_BOT_TOKEN
+   ```
+10. Run the application
    ```
    python3 app.py
    ```
