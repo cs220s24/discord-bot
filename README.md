@@ -29,7 +29,7 @@ This Discord bot is a simple example bot that can be used to interact with users
    BOT_TOKEN=YOUR_DISCORD_BOT_TOKEN
    ```
 
-### Usage
+### Running on a local machine
 1. Make the run_bot.sh script executable by running:
    ```
    chmod +x run_bot.sh
@@ -40,6 +40,38 @@ This Discord bot is a simple example bot that can be used to interact with users
    ```
    
 3. The bot will log in and be ready to respond to commands and events in the Discord server.
+
+### Running on a AWS EC2 Instance
+1. Install git
+   ```
+   sudo yum install git
+   ```
+2. Clone the repository
+3. Create the virtual environment
+   ```
+   python3 -m venv .venv
+   source .venv/bin/activate
+   ```
+4. Install requirements
+   ```
+   pip install -r requirements.txt
+   ```
+5. Install redis6 for AWS 2023
+   ```
+   sudo yum install redis6
+   ```
+6. Run Redis6 server
+   ```
+   redis6-server
+   ```
+7. Confirm the server is connected
+   ```
+   redis6-cli
+   ```
+8. Run the application
+   ```
+   python3 app.py
+   ```
 
 ### Commands
 - `!hello`: Greet the user who sends the command with a response.
