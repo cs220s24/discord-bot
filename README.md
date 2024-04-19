@@ -67,7 +67,7 @@ This Discord bot is a simple example bot that can be used to interact with users
    ```
    redis6-server
    ```
-7. Confirm the server is connected
+7. Make a third terminal and confirm the server is connected
    ```
    redis6-cli
    ```
