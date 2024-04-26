@@ -81,6 +81,35 @@ This Discord bot is a simple example bot that can be used to interact with users
    python3 app.py
    ```
 
+### Running through Docker on a AWS EC2 Instance
+1. Install Docker
+   ```
+   sudo yum install -y docker
+   ```
+2. Launch Docker
+   ```
+   sudo systemctl enable docker
+   sudo systemctl starat docker
+   ```
+3. Interact as ec-2 user
+   ```
+   sudo usermod -a -G docker ec2-user
+   ```
+4. Build the Docker image for the program
+   ```
+   cd discord-bot/
+   docker build -t discord-bot .
+   ```
+5. Create a Docker network for your redis database to run over
+   ```
+   docker network create -d bridge botdb
+   ```
+6. Run dock_aws.sh to run redis and the bot through Docker
+   ```
+   bash dock_aws.sh
+   ```
+
+
 ### Commands
 - `!hello`: Greet the user who sends the command with a response.
 - `!motivate`: Gives the user who sends the command an inspiring quote.
