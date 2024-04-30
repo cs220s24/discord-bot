@@ -95,16 +95,25 @@ This Discord bot is a simple example bot that can be used to interact with users
    ```
    sudo usermod -a -G docker ec2-user
    ```
-4. Build the Docker image for the program
+4. Change host in db.py
+   edit:
+   ```
+   def __init__(self, host='localhost', port=6379, db=0):
+   ```
+   to:
+   ```
+   def __init__(self, host='redisdb', port=6379, db=0):
+   ```
+5. Build the Docker image for the program
    ```
    cd discord-bot/
    docker build -t discord-bot .
    ```
-5. Create a Docker network for your redis database to run over
+6. Create a Docker network for your redis database to run over
    ```
    docker network create -d bridge botdb
    ```
-6. Run dock_aws.sh to run redis and the bot through Docker
+7. Run dock_aws.sh to run redis and the bot through Docker
    ```
    bash dock_aws.sh
    ```
